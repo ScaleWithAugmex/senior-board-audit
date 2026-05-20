@@ -6,6 +6,14 @@
 [![Built by Augmex](https://img.shields.io/badge/built%20by-Augmex-blue)](https://augmex.io)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill-orange)](https://claude.com)
 
+
+<p align="center">
+  <img src="docs/images/01-invocation.jpg" alt="Invoking the Senior Board Audit skill in Claude Code" width="800">
+  <br>
+  <em>Invoking the skill on a real project.</em>
+</p>
+
+
 ---
 
 ## What this is
@@ -92,6 +100,27 @@ The skill will:
 8. Write the final report.
 
 Plan for 15 to 45 minutes of agent time for a small to medium codebase. Larger systems can take several hours. The agent will work autonomously after the initial questions.
+
+---
+
+## What it looks like in action
+
+The board works through the codebase in phases, building evidence before issuing verdicts. It cross-checks documentation against live code, samples real call sites, and is willing to record honest false positives.
+
+<p align="center">
+  <img src="docs/images/02-board-investigation.jpg" alt="The board investigating a potential IDOR vulnerability in a real codebase" width="900">
+  <br>
+  <em>The board hunting cross-tenant IDOR risks. Note the honest false-positive admission on simulations.py.</em>
+</p>
+
+The audit runs over multiple passes, scanning different layers of the system before consolidating findings.
+
+<p align="center">
+  <img src="docs/images/03-board-passes.jpg" alt="The board running phase 3 passes across services" width="900">
+  <br>
+  <em>Phase 3 passes across engines, data layer, and frontend.</em>
+</p>
+
 
 ---
 
