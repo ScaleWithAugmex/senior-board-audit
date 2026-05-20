@@ -1,30 +1,7 @@
 ---
 name: senior-board-audit
 version: 1.0.0
-description: |
-  Runs a surgical audit of a codebase using a four-agent board of senior
-  engineers. The board lists every component and feature, then debates each
-  one in turn: a Defender argues the current implementation is sound, a
-  Challenger proposes a better version, and a Judge decides which one wins.
-  The lead Auditor orchestrates and writes the final report.
-
-  The skill adapts to the project stage. For a pre-coding blueprint it asks
-  about scale, trade-offs, and compliance. For a mid-project codebase it
-  hunts performance bottlenecks, race conditions, and observability gaps.
-  For a pre-ship product it stress-tests deployment safety, rollback paths,
-  and security posture.
-
-  Triggers: any time the user says "audit", "review", "check the codebase",
-  "is this ready to ship", "find the loopholes", "run the board",
-  "senior review", "board audit", "code surgery", or "are we good to
-  launch". Also triggers for explicit project stage check-ins: "we're
-  about to start", "we're halfway through", "we're shipping next week".
-
-  Built for use with Claude Opus or any coding agent that can read code,
-  query databases, and run multiple reasoning passes. Optimised for
-  backend systems, full-stack web apps, and AI-wrapped products.
-
-  Developed by Augmex Technologies Limited (augmex.io). MIT licensed.
+description: Runs a surgical four-agent board audit of a codebase. Built for Claude Opus and coding agents that read files, query databases, and reason across multiple passes. The Auditor catalogs every component and orchestrates the board. The Defender argues the current code is sound. The Challenger attacks with code-level evidence and proposes alternatives. The Judge rules with a verdict (KEEP, REFACTOR, REWRITE, DELETE, SPLIT) and severity (BLOCKER, MAJOR, MINOR, NOTE). Adapts to project stage. Pre-coding asks architecture questions. Mid-project hunts bottlenecks and race conditions. Pre-ship stress-tests rollback paths and load capacity. Catches IDOR risks, N+1 queries, missing rate limits, unbounded LLM costs, hardcoded secrets, prompt injection, missing observability. Triggers run a senior board audit, audit the codebase, find the loopholes, is this ready to ship, senior review, board audit, code surgery. Refuses to modify source files. Writes only to docs/audit/. Built by Augmex Technologies. MIT licensed.
 allowed-tools:
   - Read
   - Write
