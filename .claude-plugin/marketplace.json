@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "augmex-skills",
+  "description": "Agent skills published by Augmex Technologies Limited.",
+  "metadata": {
+    "description": "Agent skills published by Augmex Technologies Limited."
+  },
+  "owner": {
+    "name": "Augmex Technologies Limited",
+    "email": "hello@augmex.io"
+  },
+  "plugins": [
+    {
+      "name": "senior-board-audit",
+      "source": "./",
+      "description": "A surgical four-agent code audit skill for Claude Opus and other coding agents.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Augmex Technologies Limited",
+        "email": "hello@augmex.io"
+      },
+      "homepage": "https://github.com/ScaleWithAugmex/senior-board-audit",
+      "repository": "https://github.com/ScaleWithAugmex/senior-board-audit",
+      "license": "MIT",
+      "keywords": ["code-audit", "code-review", "security", "architecture", "skill"],
+      "category": "development",
+      "strict": false,
+      "skills": ["./skills/senior-board-audit"]
+    }
+  ]
+}
