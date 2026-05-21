@@ -331,6 +331,6 @@ If this skill saves your team from a 3 AM incident, that is the only success met
 
 - **Project issues:** [GitHub Issues](../../issues)
 - **Augmex Technologies:** [augmex.io](https://augmex.io) | hello@augmex.io
-- **Maintainer:** [@augmex](https://github.com/augmex)
+- **Maintainer:** [@ScaleWithAugmex](https://github.com/ScaleWithAugmex)
 
 For security disclosures, see [SECURITY.md](SECURITY.md).
