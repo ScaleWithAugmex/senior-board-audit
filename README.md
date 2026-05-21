@@ -57,21 +57,32 @@ Every component in your codebase gets a verdict: KEEP AS IS, REFACTOR, REWRITE, 
 
 ## How to install
 
-### Option A: Claude Code
+### Option A: Claude Code via marketplace (recommended)
 
-1. Clone this repo or download `skill/SKILL.md`.
+Add the marketplace, then install the plugin:
+
+```
+/plugin marketplace add ScaleWithAugmex/senior-board-audit
+/plugin install senior-board-audit@augmex-skills
+```
+
+Then run any of the trigger phrases listed below.
+
+### Option A2: Claude Code (manual install)
+
+1. Clone this repo or download `skills/senior-board-audit/SKILL.md`.
 2. Copy it to your project's skills directory (typically `.claude/skills/senior-board-audit/SKILL.md`).
 3. Run any of the trigger phrases listed below.
 
 ### Option B: Claude.ai with Skills enabled
 
-1. Download `skill/SKILL.md`.
+1. Download `skills/senior-board-audit/SKILL.md`.
 2. Add it as a custom skill in your Claude settings.
 3. Invoke from any conversation.
 
 ### Option C: Any coding agent that supports Markdown-based skills or system prompts
 
-1. Copy the contents of `skill/SKILL.md`.
+1. Copy the contents of `skills/senior-board-audit/SKILL.md`.
 2. Add it to your agent's system prompt or skill configuration.
 3. Trigger with the phrases below.
 
