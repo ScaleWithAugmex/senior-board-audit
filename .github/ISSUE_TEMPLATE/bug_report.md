@@ -16,17 +16,18 @@ What the skill should have done.
 
 ## How to reproduce
 
-1. Stage of project: {Pre-coding | Mid-project | Pre-ship}
+1. Stage of project: {Pre-coding | Mid-project | Pre-ship | Production}
 2. Trigger phrase used: {e.g. "Run a senior board audit"}
-3. Type of codebase: {e.g. Python FastAPI, Node.js Express, Laravel}
-4. Step-by-step:
+3. Lens where it went wrong: {Component | Security | Feature | Clash | not sure}
+4. Type of codebase: {e.g. Python FastAPI, Node.js Express, Laravel}
+5. Step-by-step:
    - Step 1
    - Step 2
    - Step 3
 
 ## Environment
 
-- Agent used: {Claude Opus 4.x, Claude Code, other}
+- Agent used: {e.g. Claude Code or Claude.ai, with the model name, or another agent}
 - Skill version: {check CHANGELOG.md or skill frontmatter}
 - OS: {macOS, Linux, Windows}
 
