@@ -11,14 +11,16 @@ The project is maintained by Augmex Technologies but designed to be community-im
 ### Always welcome
 
 - **New stage-specific questions.** If you have audited a codebase and felt a question was missing from the question bank, propose it.
-- **Red flag patterns we missed.** Especially for languages, frameworks, or domains underrepresented in the current SKILL.md (Rust, Go, Elixir, Java, .NET, mobile, embedded, game backends, data pipelines, etc).
+- **Red flag patterns we missed.** Especially for languages, frameworks, or domains underrepresented in the current skill (Rust, Go, Elixir, Java, .NET, mobile, embedded, game backends, data pipelines, etc).
+- **Security checks, feature checks, and clash classes.** Especially ones you met in a real incident. State the proof a finding of that kind needs: the attack path, the broken hop, or the input on which two sides diverge.
 - **Worked examples.** Real-world examples of the four-agent debate handling a specific component. These make the skill easier to learn from.
 - **Tone and clarity fixes.** If a section reads awkwardly or contradicts itself, send a fix.
 - **Translations.** The skill currently lives in English. Other languages welcome.
 
 ### Sometimes welcome
 
-- **New stages.** The skill currently covers Stage 0, 1, and 2. Stage 3 (Post-ship) is on the roadmap. Other stages may be considered if the case is strong.
+- **New stages.** The skill covers Stage 0 through Stage 3. Other stages may be considered if the case is strong.
+- **New lenses.** The four lenses (component, security, feature, clash) are deliberate. A fifth needs a class of defect that none of the four can see.
 - **New agent roles.** The current four-agent structure (Auditor, Defender, Challenger, Judge) is deliberate. We are open to adding a fifth role if there is a strong, distinct purpose. We are not open to bloating it with more agents for the sake of it.
 - **Integration scripts.** GitHub Actions, GitLab CI, Bitbucket Pipelines, pre-commit hooks. Useful, but they live in a separate folder and are not core to the skill.
 
@@ -61,12 +63,24 @@ Keep changes focused. One feature or fix per PR. Mixing unrelated changes makes 
 
 ### 5. Update the relevant files
 
-If your change affects user-facing behaviour, update:
-- `skill/SKILL.md` (the skill definition)
+The skill lives in `skills/senior-board-audit/`. `SKILL.md` holds the board, the rules, and the process. The checklists live in `references/`:
+
+| Change | File |
+|---|---|
+| Stage question | `references/question-banks.md` |
+| Red flag for the component review | `references/red-flags.md` |
+| Security check | `references/security-pass.md` |
+| Feature check | `references/feature-pass.md` |
+| Clash class or example | `references/clash-pass.md` |
+| Report or deliverable format | `references/report-template.md` |
+| Board roles, rules, phases, calibration | `SKILL.md` |
+
+If your change affects user-facing behaviour, also update:
 - `README.md` (if the change is mentioned there)
 - `CHANGELOG.md` (add a line under "Unreleased")
+- `examples/example-audit-report.md` (if the report format changed)
 
-If your change is a worked example or red-flag addition, just update `skill/SKILL.md`.
+Keep the files consistent with each other. A term, a file name, a count, or a severity that appears in two files must say the same thing in both. `SKILL.md` is loaded for the whole audit, so keep it to the board, the rules, and the process. New checklists go in `references/`.
 
 ### 6. Test your change
 
@@ -93,9 +107,9 @@ We are direct in reviews. We will tell you specifically what to change and why. 
 
 ---
 
-## Style guide for SKILL.md edits
+## Style guide for skill edits
 
-The skill is a Markdown file with a specific tone. Match it.
+The skill is a set of Markdown files with a specific tone. Match it.
 
 ### Do
 
@@ -127,7 +141,7 @@ Be direct without being cruel. The skill is adversarial, but contributors are no
 - Accept criticism gracefully. Give it specifically.
 - If a discussion gets heated, step away for a day. Come back with code or evidence.
 
-We do not have a long code of conduct document. The above is the whole policy. Violations will be handled case by case.
+The full policy, including how to report a problem, is in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ---
 
